@@ -1,0 +1,10 @@
+<form action="/logout" method="post">
+  <input type="submit" value="Logout" class="button">
+</form>
+ <p>
+   <center> <%= current_user.username%>'s Profile <p>
+
+<h1> Bookmarked Locations </h1>
+<% current_user.bookmarks.each do |t| %>
+  <%= t.bookmark.name %>
+<% end %>
